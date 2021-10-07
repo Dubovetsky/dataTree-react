@@ -1,0 +1,11 @@
+@each $name in (false, Light, Bold) {
+    @font-face {
+        @if $name {
+            font-family: 'OpenSans#{$name}';
+            src: url('../fonts/OpenSans-#{$name}.ttf') format('truetype');
+        } @else {
+            font-family: 'OpenSansRegular';
+            src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+        }
+    }
+}
